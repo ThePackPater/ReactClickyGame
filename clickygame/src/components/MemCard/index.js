@@ -1,26 +1,35 @@
+/* eslint-disable react/no-typos */
 import React from "react";
 import PropTypes from "prop-types";
 import "./styles.css";
 
-function MemCard({handleClick, id, front, back, height, width}) {
+export default function MemCard({handleClick, id, flipped, front, back, height, width}) {
     return(
 
         <div 
-            className={'flip-container ${flipped ? "flipped" : ""} '}
+            className={`flip-container ${flipped ? "flipped" : ""} `}
             style={{width, height}}
             onClick={() => handleClick(id)}
         >
-
             <div className="flipper">
-                <img style={{height, width}}
-                className={flipped ? front : back}
+                <img
+                    style={{height, width}}
+                    className={flipped ? "front" : "back"}
+                    src={flipped ? front : back}
                 />
-
             </div>
         </div>
+    
+    )};
 
-
-    )
+MemCard.propTypes = {
+    handleClick: PropTypes.func.isRequired,
+    id: PropTypes.number.isRequired,
+    flipped: PropTypes.bool.isRequired,
+    back: PropTypes.string.isRequired,
+    front: PropTypes.string.isRequired,
+    height: PropTypes.number.isRequired,
+    width: PropTypes.number.isRequired
 };
 
-export default MemCard;
+

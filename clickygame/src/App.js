@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState} from "react";
 import MemCard from "./components/MemCard";
 
-function App(){
+export default function App(){
+    const [flipped, setFlipped] = useState([]);
+    const handleClick = (id) => setFlipped(id);
+  
     return(
         <div>
             <h1>Can you match match the toon cards?!</h1>
@@ -18,4 +21,4 @@ function App(){
     )
 };
 
-export default App;
+ 

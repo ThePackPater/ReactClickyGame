@@ -1,22 +1,24 @@
-import React, { useState } from "react";
-import MemCard from "./components/MemCard";
+import React, { useState, useEffect } from "react";
+import GameBoard from "./components/GameBoard";
+
+import initializeDeck from "./deck"
 
 export default function App() {
+    const [cards, setCards] = useState([])
     const [flipped, setFlipped] = useState([]);
+
+    useEffect(() => {
+        setCards(initializeDeck())
+    }, [])
+
     const handleClick = (id) => setFlipped([ ...flipped, id]);
-  
     return(
         <div>
-            <h1>Can you match match the toon cards?!</h1>
-            <MemCard
-                id={1}
-                height={100} 
-                width={100}
-                front={`/img/Ramones.jpg`}
-                back={`/img/AcardBack.jpg`}
-                flipped={flipped.includes(1)}
-                handleClick={() => handleClick(1)}
-            />
+            <h1>Match the Punk Band Logos!!</h1>
+           <GameBoard
+            cards={cards}
+            flipped={flipped}
+            handleClick={handleClick}/>
         </div>
     )
 };

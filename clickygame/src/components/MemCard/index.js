@@ -16,6 +16,7 @@ export default function MemCard({handleClick, id, flipped, front, back, height, 
                     style={{height, width}}
                     className={flipped ? "front" : "back"}
                     src={flipped ? front : back}
+                    alt={"punk rock card"}
                 />
             </div>
         </div>

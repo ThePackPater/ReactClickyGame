@@ -1,8 +1,9 @@
 .flip-container {
     perspective: 1000px;
     display: inline-block;
-    border: 1px solid white;
+    border: 1px solid red;
     background: black;
+    padding:1%;
 }
 
 .flip-container.flipped .flipper {
@@ -10,12 +11,13 @@
 }
 
 .flipper {
-    transition: 0.5s;
+    transition: 0.7s;
     transform-style: preserve-3d;
     position: relative;
 }
 
-.front, .back{
+.front, 
+.back{
     backface-visibility: hidden;
     position: absolute;
     left: 0;

@@ -1,9 +1,9 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 import MemCard from "./components/MemCard";
 
-export default function App(){
+export default function App() {
     const [flipped, setFlipped] = useState([]);
-    const handleClick = (id) => setFlipped(id);
+    const handleClick = (id) => setFlipped([ ...flipped, id]);
   
     return(
         <div>
@@ -12,8 +12,8 @@ export default function App(){
                 id={1}
                 height={100} 
                 width={100}
-                front={`/img/spongebob.png`}
-                back={`/img/cardBack.png`}
+                front={`/img/Ramones.jpg`}
+                back={`/img/AcardBack.jpg`}
                 flipped={flipped.includes(1)}
                 handleClick={() => handleClick(1)}
             />

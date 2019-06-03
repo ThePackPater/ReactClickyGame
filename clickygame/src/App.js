@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import GameBoard from "./components/GameBoard";
-
 import initializeDeck from "./deck"
 
 export default function App() {
+
     const [cards, setCards] = useState([])
     const [flipped, setFlipped] = useState([]);
     const [dimension, setDimension] = useState(400)
+    const [solved, setSolved] = useState([]);
+    const [disabled, setDisabled] = useState([false]);
 
     useEffect(() => {
         resizeGameboard()
@@ -18,7 +20,11 @@ export default function App() {
         return () => window.removeEventListener("resize", resizeListener)
     });
 
-    const handleClick = (id) => setFlipped([ ...flipped, id]);
+    const handleClick = (id) => {
+        setDisabled(true)
+        setFlipped([ ...flipped, id]);
+
+    };
 
     const resizeGameboard = () => {
             setDimension(Math.min(
@@ -27,17 +33,19 @@ export default function App() {
             ),
         )    
     };
+
     return(
         <div>
             <h1>Match the Punk Band Logos!!</h1>
+
            <GameBoard
             dimension={dimension}
             cards={cards}
             flipped={flipped}
-            handleClick={handleClick}/>
+            handleClick={handleClick}
+            diabled={disabled}/>
+
             <h1>And FIGHT the System!!</h1>
         </div>
     )
-};
-
- 
+}

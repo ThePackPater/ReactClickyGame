@@ -19,6 +19,7 @@ export default function App() {
             cards={cards}
             flipped={flipped}
             handleClick={handleClick}/>
+            <h1>And FIGHT the System!!</h1>
         </div>
     )
 };

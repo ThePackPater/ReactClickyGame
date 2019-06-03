@@ -10,8 +10,8 @@ export default function GameBoard({ cards, flipped, handleClick}) {
                 key={card.id}
                 id={card.id}
                 type={card.type}
-                height={card.height} 
-                width={card.width}
+                height={100} 
+                width={100}
                 flipped={flipped.includes(card.id)}
                 handleClick={() => handleClick(card.id)}
                 />))};

@@ -3,7 +3,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./styles.css";
 
-export default function MemCard({handleClick, id, flipped, front, back, height, width}) {
+export default function MemCard({handleClick, type, id, flipped, height, width}) {
     return(
 
         <div 
@@ -15,7 +15,7 @@ export default function MemCard({handleClick, id, flipped, front, back, height, 
                 <img
                     style={{height, width}}
                     className={flipped ? "front" : "back"}
-                    src={flipped ? front : back}
+                    src={flipped ? `img/${type}.jpg` : "/img/Acardback.jpg"}
                     alt={"punk rock card"}
                 />
             </div>
@@ -27,8 +27,7 @@ MemCard.propTypes = {
     handleClick: PropTypes.func.isRequired,
     id: PropTypes.number.isRequired,
     flipped: PropTypes.bool.isRequired,
-    back: PropTypes.string.isRequired,
-    front: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
     height: PropTypes.number.isRequired,
     width: PropTypes.number.isRequired
 };

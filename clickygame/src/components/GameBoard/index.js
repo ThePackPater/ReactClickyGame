@@ -2,7 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import MemCard from "../MemCard";
 
-export default function GameBoard({ cards, flipped, handleClick}) {
+import "./styles.css";
+
+export default function GameBoard({ dimension, cards, flipped, handleClick}) {
 
     return( <div className="board">
         {
@@ -10,8 +12,8 @@ export default function GameBoard({ cards, flipped, handleClick}) {
                 key={card.id}
                 id={card.id}
                 type={card.type}
-                height={100} 
-                width={100}
+                height={dimension / 4.5} 
+                width={dimension / 4.5}
                 flipped={flipped.includes(card.id)}
                 handleClick={() => handleClick(card.id)}
                 />))};
@@ -20,6 +22,7 @@ export default function GameBoard({ cards, flipped, handleClick}) {
 };
 
 GameBoard.propTypes = {
+    dimension: PropTypes.number.isRequired
     cards: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
     flipped: PropTypes.arrayOf(PropTypes.number).isRequired,
     handleClick: PropTypes.func.isRequired,

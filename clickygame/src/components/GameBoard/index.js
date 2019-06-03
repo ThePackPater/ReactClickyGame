@@ -22,7 +22,7 @@ export default function GameBoard({ dimension, cards, flipped, handleClick}) {
 };
 
 GameBoard.propTypes = {
-    dimension: PropTypes.number.isRequired
+    dimension: PropTypes.number.isRequired,
     cards: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
     flipped: PropTypes.arrayOf(PropTypes.number).isRequired,
     handleClick: PropTypes.func.isRequired,

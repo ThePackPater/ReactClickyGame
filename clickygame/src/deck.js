@@ -15,11 +15,11 @@ function shuffle(array) {
 export default function initializeDeck() {
 
     let id = 0
-    const cards = ["Adicts", "badReligion", "blackFlag", 
-                    "clash", "Danzig", "deadKennedys", 
-                    "decendents", "dri", "minorThreat",
-                    "Misfits", "Ramones", "sexPistols",
-                    "exploited", "rancid"
+    const cards = [ "badReligion", "blackFlag", 
+                    "deadKennedys", "decendents",
+                    "minorThreat", "Misfits",
+                    "Ramones", "sexPistols"
+    
                 ].reduce((acc, type) => {
                     acc.push({
                        id: id++,

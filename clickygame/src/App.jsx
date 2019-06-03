@@ -22,9 +22,33 @@ export default function App() {
 
     const handleClick = (id) => {
         setDisabled(true)
-        setFlipped([ ...flipped, id]);
-
+        if (flipped === 0) {
+            setFlipped([ ...flipped, id])
+            setDisabled(false)
+        } else {
+            if (sameCardClicked(id)) return
+                setFlipped([flipped[0], id])
+            if (isMatch(id)){
+                setSolved([ ...solved, flipped[0], id])
+                resetCards()
+            } else {
+                setTimeout(resetCards, 2000)
+            }
+        }
     };
+
+    const resetCards = () => {
+        setFlipped([])
+        setDisabled(false)
+    }
+
+    const isMatch = (id) => {
+        const clickedCard = cards.find((card)=> card.id === id)
+        const flippedCard = cards.find((card)=> flipped[0] === id)
+        return flippedCard.type === clickedCard.type
+    } 
+
+    const sameCardClicked = (id) => flipped.includes(id);
 
     const resizeGameboard = () => {
             setDimension(Math.min(
@@ -43,7 +67,8 @@ export default function App() {
             cards={cards}
             flipped={flipped}
             handleClick={handleClick}
-            diabled={disabled}/>
+            diabled={disabled}
+            solved={solved}/>
 
             <h1>And FIGHT the System!!</h1>
         </div>

@@ -2,8 +2,12 @@
     perspective: 1000px;
     display: inline-block;
     border: 1px solid red;
-    background: black;
+    box-shadow: 5px 6px 0.5rem darkred;
+    background:url("./AcardBack.jpg");
+    background-repeat: no-repeat;
+    background-size:  cover;
     padding:1%;
+    margin: 2%;
 }
 
 .flip-container.flipped .flipper {

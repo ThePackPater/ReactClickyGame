@@ -1,21 +1,20 @@
-/* eslint-disable react/no-typos */
 import React from "react";
 import PropTypes from "prop-types";
 import "./styles.css";
 
-export default function MemCard({handleClick, type, id, flipped, height, width}) {
+export default function MemCard({ solved, disabled, handleClick, type, id, flipped, height, width}) {
     return(
 
         <div 
             className={`flip-container ${flipped ? "flipped" : ""} `}
             style={{width, height}}
-            onClick={() => handleClick(id)}
+            onClick={() => disabled ? null : handleClick(id)}
         >
             <div className="flipper">
                 <img
                     style={{height, width}}
                     className={flipped ? "front" : "back"}
-                    src={flipped ? `img/${type}.jpg` : "/img/Acardback.jpg"}
+                    src={flipped || solved ? `img/${type}.jpg` : "/img/Acardback.jpg"}
                     alt={"punk rock card"}
                 />
             </div>
@@ -24,6 +23,8 @@ export default function MemCard({handleClick, type, id, flipped, height, width})
     )};
 
 MemCard.propTypes = {
+    solved: PropTypes.bool.isRequired,
+    disabled: PropTypes.bool.isRequired,
     handleClick: PropTypes.func.isRequired,
     id: PropTypes.number.isRequired,
     flipped: PropTypes.bool.isRequired,

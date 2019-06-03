@@ -4,7 +4,7 @@ import MemCard from "../MemCard";
 
 import "./styles.css";
 
-export default function GameBoard({ disabled, dimension, cards, flipped, handleClick}) {
+export default function GameBoard({ solved, disabled, dimension, cards, flipped, handleClick}) {
 
     return( <div className="board">
         {
@@ -17,12 +17,14 @@ export default function GameBoard({ disabled, dimension, cards, flipped, handleC
                 flipped={flipped.includes(card.id)}
                 handleClick={handleClick}
                 disabled={disabled}
+                solved={disabled || solved.includes(card.id)}
                 />))};
             </div>
     )
 };
 
 GameBoard.propTypes = {
+    solved: PropTypes.arrayOf(PropTypes.number).isRequired,
     disabled: PropTypes.bool.isRequired,
     dimension: PropTypes.number.isRequired,
     cards: PropTypes.arrayOf(PropTypes.shape({})).isRequired,

@@ -18,7 +18,8 @@ export default function initializeDeck() {
     const cards = [ "badReligion", "blackFlag", 
                     "deadKennedys", "decendents",
                     "minorThreat", "Misfits",
-                    "Ramones", "sexPistols"
+                    "Ramones", "sexPistols", 
+                    "explioted", "dri"
     
                 ].reduce((acc, type) => {
                     acc.push({

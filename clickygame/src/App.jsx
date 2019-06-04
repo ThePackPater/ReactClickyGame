@@ -28,11 +28,11 @@ export default function App() {
         } else {
             if (sameCardClicked(id)) return
                 setFlipped([flipped[0], id])
-            if (isMatch(id)){
+            if  (isMatch(id)){
                 setSolved([ ...solved, flipped[0], id])
                 resetCards()
             } else {
-                setTimeout(resetCards, 2000)
+                setTimeout(resetCards, 3000)
             }
         }
     };

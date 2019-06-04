@@ -6,9 +6,11 @@ import "./styles.css";
 
 export default function GameBoard({ solved, disabled, dimension, cards, flipped, handleClick}) {
 
-    return( <div className="board">
-        {
-            cards.map((card) => ( <MemCard
+    return(
+        <div className="wrapper">
+            <div className="board">
+            {
+                cards.map((card) => ( <MemCard
                 key={card.id}
                 id={card.id}
                 type={card.type}
@@ -20,6 +22,7 @@ export default function GameBoard({ solved, disabled, dimension, cards, flipped,
                 solved={disabled || solved.includes(card.id)}
                 />))};
             </div>
+        </div>
     )
 };
 

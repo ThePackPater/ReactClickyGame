@@ -1,16 +1,16 @@
 .flip-container {
     perspective: 1000px;
     display: inline-block;
-    border: 1px solid red;
+    border: 2px solid darkred;
     outline: 1px solid firebrick;
     outline-offset: -5px;
     /* outline-style: groove; */
-    box-shadow: 5px 6px 0.5rem darkred;
+    box-shadow: 3px 6px 0.5rem red;
     background:url("./AcardBack.jpg");
     background-repeat: no-repeat;
-    background-size:  cover;
+    background-size: cover;
     padding:1%;
-    margin: 1%;
+    margin: .5%;
 }
 
 .flip-container.flipped .flipper {

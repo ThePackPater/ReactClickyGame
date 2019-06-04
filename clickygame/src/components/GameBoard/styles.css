@@ -2,8 +2,12 @@ body {
     width: 100%
 }
 
-.Gameboard {
+.wrapper {
+    text-align: center;
+}
 
+.Gameboard {
+    display: inline-block;
     margin: 0px;
     padding: 0px;
 }

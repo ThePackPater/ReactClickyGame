@@ -40,9 +40,6 @@ export default function App() {
         setDisabled(false)
     };
 
-
-
-
     const handleClick = (id) => {
             setDisabled(true)
             // console.log("clicked")
@@ -54,7 +51,7 @@ export default function App() {
                 setFlipped((flipped) => [...flipped, id])
             if  (isAMatch(id)) { 
                 setSolved([...solved, ...flipped, id])
-                resetCards()
+                //need code if solved remove cards add points 
             } else {
                 setTimeout(resetCards, 2000)
             }

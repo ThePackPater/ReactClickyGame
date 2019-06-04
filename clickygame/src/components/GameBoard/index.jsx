@@ -19,8 +19,8 @@ export default function GameBoard({
                 cards.map((card) => ( <MemCard
                 key={card.id}
                 type={card.type}
-                height={dimension / 6.5} 
-                width={dimension / 6.5}
+                height={dimension / 5.5} 
+                width={dimension / 5.5}
                 flipped={flipped.includes(card.id)}
                 handleClick={handleClick}
                 disabled={disabled}

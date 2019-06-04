@@ -23,7 +23,7 @@ export default function MemCard({
                 <img
                     style={{height, width}}
                     className={flipped ? "front" : "back"}
-                    src={flipped || solved ? `img/${type}.jpg` : `../public/img/MATCHED.jpg`}
+                    src={flipped || solved ? `img/${type}.jpg` : `hide-MemCard`}
                     alt={"punk rock card"}
                 />
             </div>

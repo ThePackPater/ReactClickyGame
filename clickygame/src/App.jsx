@@ -60,7 +60,7 @@ export default function App() {
 
     return(
         <div>
-            <h1>Match the Punk Band Logos!!</h1>
+            <h1>Match the PUNK BAND Logos!!</h1>
 
            <GameBoard
             dimension={dimension}

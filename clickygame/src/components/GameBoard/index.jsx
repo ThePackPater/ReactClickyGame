@@ -14,8 +14,8 @@ export default function GameBoard({ solved, disabled, dimension, cards, flipped,
                 key={card.id}
                 id={card.id}
                 type={card.type}
-                height={dimension / 7.5} 
-                width={dimension / 7.5}
+                height={dimension / 8.5} 
+                width={dimension / 8.5}
                 flipped={flipped.includes(card.id)}
                 handleClick={handleClick}
                 disabled={disabled}

@@ -2,7 +2,16 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./styles.css";
 
-export default function MemCard({ solved, disabled, handleClick, type, id, flipped, height, width}) {
+export default function MemCard({ 
+    solved, 
+    disabled, 
+    handleClick, 
+    type, 
+    id, 
+    flipped, 
+    height, 
+    width
+}) {
     return(
 
         <div 

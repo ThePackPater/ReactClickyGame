@@ -23,7 +23,7 @@ export default function MemCard({
                 <img
                     style={{height, width}}
                     className={flipped ? "front" : "back"}
-                    src={flipped || solved ? `img/${type}.jpg` : "/img/Acardback.jpg"}
+                    src={flipped || solved ? `img/${type}.jpg` : `../public/img/MATCHED.jpg`}
                     alt={"punk rock card"}
                 />
             </div>
@@ -33,7 +33,7 @@ export default function MemCard({
 
 MemCard.propTypes = {
     solved: PropTypes.bool.isRequired,
-    disabled: PropTypes.bool.isRequired,
+    disabled: PropTypes.bool,
     handleClick: PropTypes.func.isRequired,
     id: PropTypes.number.isRequired,
     flipped: PropTypes.bool.isRequired,

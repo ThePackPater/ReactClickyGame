@@ -3,7 +3,6 @@ import GameBoard from "./components/GameBoard";
 import initializeDeck from "./deck";
 
 export default function App() {
-
     const [cards, setCards] = useState([]);
     const [flipped, setFlipped] = useState([]);
     const [dimension, setDimension] = useState(400);
@@ -14,7 +13,7 @@ export default function App() {
         resizeGameboard()
         setCards(initializeDeck())
     }, []);
-
+   
     useEffect(() => {
         const resizeListener = window.addEventListener("resize", resizeGameboard)
         return () => window.removeEventListener("resize", resizeListener)

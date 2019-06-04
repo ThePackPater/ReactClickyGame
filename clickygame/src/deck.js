@@ -17,8 +17,8 @@ export default function initializeDeck() {
                     "deadKennedys", "decendents",
                     "minorThreat", "Misfits",
                     "Ramones", "sexPistols", 
-                    "explioted", "dri", 
-                    "rancid", "Adicts",
+                    "exploited", "dri", 
+                    "clash", "Adicts"
         ].reduce((acc, type) => {
             acc.push(...[{
                 id: id++,

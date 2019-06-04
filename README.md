@@ -1,7 +1,5 @@
 # ReactClickyGame
 
-![Logo](https://github.com/ThePackPater/ReactClickyGame/blob/master/clickygame/public/img/screenShot1.PNG)
-
 ## VBC React App Memory Game
 
 ### *How to Play*
@@ -14,3 +12,5 @@
 6. _The game is over when all the cards have been matched_
 
 ### //Heroku Deloyment link
+
+![Logo](https://github.com/ThePackPater/ReactClickyGame/blob/master/clickygame/public/img/screenShot1.PNG)

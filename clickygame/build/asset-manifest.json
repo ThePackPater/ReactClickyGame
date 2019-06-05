@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0a5f7603.chunk.css",
+    "main.js": "/static/js/main.649c97a8.chunk.js",
+    "main.js.map": "/static/js/main.649c97a8.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/js/2.1b3a0643.chunk.js": "/static/js/2.1b3a0643.chunk.js",
+    "static/js/2.1b3a0643.chunk.js.map": "/static/js/2.1b3a0643.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.03bb9eb48970a24e04e2fac94a317277.js": "/precache-manifest.03bb9eb48970a24e04e2fac94a317277.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.0a5f7603.chunk.css.map": "/static/css/main.0a5f7603.chunk.css.map",
+    "static/media/styles.css": "/static/media/AcardBack.bb193f04.jpg"
+  }
+}

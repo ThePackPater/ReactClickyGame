@@ -18,13 +18,14 @@ export default function GameBoard({
             {
                 cards.map((card) => ( <MemCard
                 key={card.id}
+                id={card.id}
                 type={card.type}
                 height={dimension / 5.5} 
                 width={dimension / 5.5}
                 flipped={flipped.includes(card.id)}
                 handleClick={handleClick}
-                disabled={disabled}
-                solved={disabled || solved.includes(card.id)}
+                disabled={disabled || solved.includes(card.id)}
+                solved={solved.includes(card.id)}
                 {...card}
                 />
             ))};

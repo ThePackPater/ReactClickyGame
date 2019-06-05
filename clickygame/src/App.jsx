@@ -41,17 +41,16 @@ export default function App() {
     };
 
     const handleClick = (id) => {
-            setDisabled(true)
-            // console.log("clicked")
+        setDisabled(true)
         if (flipped.length === 0) {
-            setFlipped((flipped) => [...flipped, id])
+            setFlipped([id])
             setDisabled(false)
         } else {
-            if (sameCardClickedTwice(flipped, id)) return 
-                setFlipped((flipped) => [...flipped, id])
-            if  (isAMatch(id)) { 
-                setSolved([...solved, ...flipped, id])
-                //need code if solved remove cards add points 
+            if (sameCardClickedTwice(id)) return 
+                setFlipped([flipped[0], id])
+            if (isAMatch(id)) { 
+                setSolved([...solved, flipped[0], id])
+                //need code if solved remove cards || keep cards face up & add points 
             } else {
                 setTimeout(resetCards, 2000)
             }

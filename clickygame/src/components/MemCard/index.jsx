@@ -3,27 +3,28 @@ import PropTypes from "prop-types";
 import "./styles.css";
 
 export default function MemCard({ 
-    disabled, 
-    handleClick, 
-    type, 
-    id, 
+    handleClick,
     flipped,
     solved,  
+    id, 
+    type,  
     height, 
-    width
-}) {
-    return(
-
+    width,
+    disabled
+}) { return(
         <div 
             className={`flip-container ${flipped ? "flipped" : ""} `}
-            style={{width, height}}
-            onClick={() => disabled ? null : handleClick(id)}
+            style={{
+                width,
+                height
+            }}
+            onClick={() => (disabled ? null : handleClick(id))}
         >
             <div className="flipper">
                 <img
                     style={{height, width}}
                     className={flipped ? "front" : "back"}
-                    src={flipped || solved ? `/img/${type}.jpg` : `/AcardBack.jpg`}
+                    src={flipped || solved ? `/img/${type}.jpg` : "/img/AcardBack.jpg"}
                     alt={"punk rock card"}
                 />
             </div>

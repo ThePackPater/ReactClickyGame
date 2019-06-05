@@ -47,9 +47,9 @@ export default function App() {
             setDisabled(false)
         } else {
             if (sameCardClickedTwice(id)) return 
-                setFlipped([flipped[0], id])
+                setFlipped([...flipped, id])
             if (isAMatch(id)) { 
-                setSolved([...solved, flipped[0], id])
+                setSolved([...solved, ...flipped, id])
                 //need code if solved remove cards || keep cards face up & add points 
             } else {
                 setTimeout(resetCards, 2000)

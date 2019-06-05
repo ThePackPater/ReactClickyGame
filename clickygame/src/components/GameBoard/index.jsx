@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import MemCard from "../MemCard";
-
 import "./styles.css";
 
 export default function GameBoard({
@@ -14,14 +13,14 @@ export default function GameBoard({
     }) {
     return(
         <div className="wrapper">
-            <div className="board">
+            <div className="board" >
             {
                 cards.map((card) => ( <MemCard
                 key={card.id}
-                id={card.id}
+                // id={card.id}
                 type={card.type}
-                height={dimension / 5.5} 
-                width={dimension / 5.5}
+                height={dimension / 4.5} 
+                width={dimension / 4.5}
                 flipped={flipped.includes(card.id)}
                 handleClick={handleClick}
                 disabled={disabled || solved.includes(card.id)}
